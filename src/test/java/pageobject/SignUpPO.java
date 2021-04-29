@@ -2,6 +2,8 @@ package pageobject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class SignUpPO {
 
@@ -37,6 +39,10 @@ public class SignUpPO {
 
     private By submit = By.id("submitbtn");
 
+    public void go(String url){
+        this.driver.get(url);
+    }
+
     public void writeFirstName(String firstname){
         this.driver.findElement(this.firstName).sendKeys(firstname);
     }
@@ -65,15 +71,33 @@ public class SignUpPO {
         this.driver.findElement(this.country).sendKeys(country);
     }
 
+
+
     public void selectBirthDay(String day){
-        this.driver.findElement(this.birthDayDate).sendKeys(day);
+
+        WebElement selectBirthDay = this.driver.findElement(this.birthDayDate);
+        Select dayValue = new Select(selectBirthDay);
+        dayValue.selectByValue(day);
+
+
+
     }
 
     public void selectBirthMonth(String month){
-        this.driver.findElement(this.birthMonthDate).sendKeys(month);
+
+        WebElement selectBirthMonth = this.driver.findElement(this.birthMonthDate);
+        Select monthValue = new Select(selectBirthMonth);
+        monthValue.selectByValue(month);
+
+
     }
     public void selectBirthYear(String year){
-        this.driver.findElement(this.birthYearDate).sendKeys(year);
+
+        WebElement selectBirthYear = this.driver.findElement(this.birthYearDate);
+        Select yearValue = new Select(selectBirthYear);
+        yearValue.selectByValue(year);
+
+
     }
 
     public void writePassword(String password){
