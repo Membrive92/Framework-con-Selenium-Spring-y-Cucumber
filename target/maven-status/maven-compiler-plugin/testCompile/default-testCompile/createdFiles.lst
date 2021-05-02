@@ -1,4 +1,5 @@
 util\RandomNumberGenerator.class
 pageobject\SignUpPO.class
+pageobject\SignUpServices.class
 stepdefinitions\SignUpStepDefs.class
 CucumberTest.class

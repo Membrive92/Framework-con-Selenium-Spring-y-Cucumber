@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pageobject.SignUpPO;
+import pageobject.SignUpServices;
 import util.RandomNumberGenerator;
 
 public class SignUpStepDefs {
@@ -17,22 +18,23 @@ public class SignUpStepDefs {
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/resources/driver/windows/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
-        SignUpPO signUpPO = new SignUpPO(driver);
-        signUpPO.go("http://demo.automationtesting.in/Register.html");
-        signUpPO.writeFirstName("Jose");
-        signUpPO.writeLastName("membs");
-        signUpPO.writeEmail("test@mail.com");
-        signUpPO.writePhone(RandomNumberGenerator.get());
-        signUpPO.selectMale();
-        signUpPO.selectCountry("Spain");
-        signUpPO.selectBirthDay("13");
-        signUpPO.selectBirthMonth("September");
-        signUpPO.selectBirthYear("1992");
-        signUpPO.writePassword("Mtest22");
-        signUpPO.writeConfirmPassword("Mtest22");
-        signUpPO.clickOnSubmit();
+        SignUpServices signUpServices = new SignUpServices(driver);
+        signUpServices.go("http://demo.automationtesting.in/Register.html");
+        signUpServices.writeFirstName("Jose");
+        signUpServices.writeLastName("membs");
+        signUpServices.writeEmail("test@mail.com");
+        signUpServices.writePhone(RandomNumberGenerator.get());
+        signUpServices.selectMale();
+        Thread.sleep( 3000);
+        signUpServices.selectCountry("Spain");
+        signUpServices.selectBirthDay("13");
+        signUpServices.selectBirthMonth("September");
+        signUpServices.selectBirthYear("1992");
+        signUpServices.writePassword("Mtest22");
+        signUpServices.writeConfirmPassword("Mtest22");
+        signUpServices.clickOnSubmit();
 
-        Thread.sleep( 4000);
+        Thread.sleep( 8000);
         driver.quit();
     }
 
