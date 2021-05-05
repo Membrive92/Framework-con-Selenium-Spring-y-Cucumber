@@ -1,4 +1,4 @@
-package pageobject;
+package framework.pageobject;
 
 
 import lombok.Getter;

@@ -1,5 +1,6 @@
-util\RandomNumberGenerator.class
-pageobject\SignUpPO.class
-pageobject\SignUpServices.class
-stepdefinitions\SignUpStepDefs.class
-CucumberTest.class
+framework\util\RandomNumberGenerator.class
+framework\HookDriver.class
+framework\stepdefinitions\SignUpStepDefs.class
+framework\pageobject\SignUpPO.class
+framework\pageobject\SignUpServices.class
+framework\CucumberTest.class

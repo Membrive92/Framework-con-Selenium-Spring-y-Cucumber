@@ -1,24 +1,22 @@
-package stepdefinitions;
+package framework.stepdefinitions;
 
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import pageobject.SignUpPO;
-import pageobject.SignUpServices;
-import util.RandomNumberGenerator;
+import framework.HookDriver;
+import framework.pageobject.SignUpServices;
+import framework.util.RandomNumberGenerator;
 
 public class SignUpStepDefs {
 
+
+
     @Given("^Jose wants to have an account$")
-    public void jose_wants_to_have_an_account() throws Throwable {
+    public void jose_wants_to_have_an_account() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/src/test/resources/driver/windows/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
 
-        SignUpServices signUpServices = new SignUpServices(driver);
+        SignUpServices signUpServices = new SignUpServices(HookDriver.driver);
         signUpServices.go("http://demo.automationtesting.in/Register.html");
         signUpServices.writeFirstName("Jose");
         signUpServices.writeLastName("membs");
@@ -35,7 +33,7 @@ public class SignUpStepDefs {
         signUpServices.clickOnSubmit();
 
         Thread.sleep( 8000);
-        driver.quit();
+
     }
 
     @When("^he sends required information to get the account$")

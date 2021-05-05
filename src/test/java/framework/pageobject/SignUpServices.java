@@ -1,9 +1,6 @@
-package pageobject;
+package framework.pageobject;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import pageobject.SignUpPO;
 
 public class SignUpServices {
 
