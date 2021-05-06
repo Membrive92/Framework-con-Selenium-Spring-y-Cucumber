@@ -4,19 +4,24 @@ package framework.stepdefinitions;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import framework.HookDriver;
+import framework.conf.DriverConfig;
 import framework.pageobject.SignUpServices;
 import framework.util.RandomNumberGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 
+@ContextConfiguration(classes = {DriverConfig.class})
 public class SignUpStepDefs {
 
+    @Autowired
+    private SignUpServices signUpServices;
 
 
     @Given("^Jose wants to have an account$")
     public void jose_wants_to_have_an_account() throws InterruptedException {
 
 
-        SignUpServices signUpServices = new SignUpServices(HookDriver.driver);
+
         signUpServices.go("http://demo.automationtesting.in/Register.html");
         signUpServices.writeFirstName("Jose");
         signUpServices.writeLastName("membs");

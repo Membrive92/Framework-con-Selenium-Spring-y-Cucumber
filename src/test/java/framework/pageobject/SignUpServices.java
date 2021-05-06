@@ -1,16 +1,21 @@
 package framework.pageobject;
 
 import org.openqa.selenium.WebDriver;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SignUpServices {
+
 
     private WebDriver driver;
 
+    @Autowired
     private SignUpPO signUpPO;
 
+    @Autowired
     public SignUpServices(WebDriver driver) {
         this.driver = driver;
-        signUpPO = new SignUpPO(driver);
     }
     public void go(String url){
         this.driver.get(url);

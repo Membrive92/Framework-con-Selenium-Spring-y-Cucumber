@@ -1,6 +1,6 @@
 framework\util\RandomNumberGenerator.class
-framework\HookDriver.class
 framework\stepdefinitions\SignUpStepDefs.class
 framework\pageobject\SignUpPO.class
 framework\pageobject\SignUpServices.class
+framework\conf\DriverConfig.class
 framework\CucumberTest.class
