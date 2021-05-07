@@ -5,9 +5,11 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import framework.conf.DriverConfig;
+import framework.enums.Browser;
 import framework.pageobject.SignUpServices;
 import framework.util.RandomNumberGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
 
 @ContextConfiguration(classes = {DriverConfig.class})
@@ -16,13 +18,15 @@ public class SignUpStepDefs {
     @Autowired
     private SignUpServices signUpServices;
 
+    @Value("${url}")
+    private String url;
 
     @Given("^Jose wants to have an account$")
     public void jose_wants_to_have_an_account() throws InterruptedException {
 
 
 
-        signUpServices.go("http://demo.automationtesting.in/Register.html");
+        signUpServices.go(url);
         signUpServices.writeFirstName("Jose");
         signUpServices.writeLastName("membs");
         signUpServices.writeEmail("test@mail.com");
