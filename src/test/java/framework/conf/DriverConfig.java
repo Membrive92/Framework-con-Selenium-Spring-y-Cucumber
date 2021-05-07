@@ -15,7 +15,8 @@ import java.time.Duration;
 
 @Configuration
 @ComponentScan(basePackages = "framework")
-@PropertySource("classpath:/application.properties")
+//mvn clean test -Denviroment=variable
+@PropertySource("classpath:/application-${enviroment:pro}.properties")
 public class DriverConfig {
 
     @Value("${driver.type}")
