@@ -11,11 +11,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Getter
-public class SignUpPO {
+public class SignUpPO extends PageBase {
 
     @Autowired
     public SignUpPO(WebDriver driver){
-        PageFactory.initElements(driver, this);
+        super(driver);
     }
 
     @FindBy(xpath = "//input[@ng-model='FirstName']")

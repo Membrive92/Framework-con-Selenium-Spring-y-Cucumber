@@ -1,33 +1,36 @@
 package framework.pageobject;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class SignUpServices {
 
-
+    @Autowired
     private WebDriver driver;
 
     @Autowired
     private SignUpPO signUpPO;
 
     @Autowired
-    public SignUpServices(WebDriver driver) {
-        this.driver = driver;
-    }
+    WebDriverWait wait;
+
+
     public void go(String url){
         this.driver.get(url);
     }
 
-    public void writeFirstName(String firstname){
-
-        this.signUpPO.getFirstName().sendKeys(firstname);
+    public void writeFirstName(String firstName){
+        this.wait.until(ExpectedConditions.visibilityOf(this.signUpPO.getFirstName()));
+        this.signUpPO.getFirstName().sendKeys(firstName);
     }
 
-    public void writeLastName(String lastname){
-        this.signUpPO.getLastName().sendKeys(lastname);
+    public void writeLastName(String lastName){
+        this.signUpPO.getLastName().sendKeys(lastName);
     }
 
     public void writeEmail(String email){

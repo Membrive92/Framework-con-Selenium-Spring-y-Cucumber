@@ -2,6 +2,7 @@ framework\util\RandomNumberGenerator.class
 framework\stepdefinitions\SignUpStepDefs.class
 framework\pageobject\SignUpPO.class
 framework\pageobject\SignUpServices.class
+framework\pageobject\PageBase.class
 framework\CucumberTest.class
 framework\enums\Browser.class
 framework\util\driver\DriverFactory.class
