@@ -33,7 +33,7 @@ public class SignUpPO extends PageBase {
     @FindBy(xpath = "//input[@value='Male']")
     private WebElement genderMale;
 
-    @FindBy(xpath = "//input[@value='Female']")
+    @FindBy(xpath = "//input[@value='FeMale']")
     private WebElement genderFemale;
 
     @FindBy(id = "countries")

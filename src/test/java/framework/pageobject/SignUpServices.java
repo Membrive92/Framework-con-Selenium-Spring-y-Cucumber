@@ -1,7 +1,7 @@
 package framework.pageobject;
 
+import framework.enums.Gender;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,12 +41,20 @@ public class SignUpServices {
         this.signUpPO.getPhone().sendKeys(phone);
     }
 
-    public void selectMale(){
+    private void selectMale(){
         this.signUpPO.getGenderMale().click();
     }
 
-    public void selectFemale(){
+    private void selectFemale(){
         this.signUpPO.getGenderFemale().click();
+    }
+
+    public void selectGender(Gender gender){
+        if (gender == Gender.female){
+           selectFemale();
+        } else {
+            selectMale();
+        }
     }
 
     public void selectCountry(String country){
