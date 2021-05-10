@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="1" name="framework.CucumberTest" time="28.898" errors="0" skipped="0">
+<testsuite tests="2" failures="1" name="framework.CucumberTest" time="28.865" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -65,8 +65,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Client sign up" name="client sign up successfully" time="16.365"/>
-  <testcase classname="Client sign up" name="client sign up failed" time="12.533">
+  <testcase classname="Client sign up" name="client sign up successfully" time="16.187"/>
+  <testcase classname="Client sign up" name="client sign up failed" time="12.678">
     <failure message="expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -74,5 +74,21 @@
 	at framework.stepdefinitions.SignUpStepDefs.he_should_be_told_that_the_account_was_not_created(SignUpStepDefs.java:57)
 	at ✽.he should be told that the account was not created(file:///C:/Users/membr/IdeaProjects/selenium-Framework/src/test/resources/features/signup.feature:12)
 </failure>
+    <system-out>
+Scenario: client sign up failed                           &amp;#27;[90m# src/test/resources/features/signup.feature:9&amp;#27;[0m
+  &amp;#27;[32mGiven &amp;#27;[0m&amp;#27;[32mJose wants to have an account&amp;#27;[0m                     &amp;#27;[90m# framework.stepdefinitions.SignUpStepDefs.jose_wants_to_have_an_account()&amp;#27;[0m
+  &amp;#27;[32mWhen &amp;#27;[0m&amp;#27;[32mhe sends required information to get the account&amp;#27;[0m   &amp;#27;[90m# framework.stepdefinitions.SignUpStepDefs.he_sends_required_information_to_get_the_account()&amp;#27;[0m
+  &amp;#27;[31mThen &amp;#27;[0m&amp;#27;[31mhe should be told that the account was not created&amp;#27;[0m &amp;#27;[90m# framework.stepdefinitions.SignUpStepDefs.he_should_be_told_that_the_account_was_not_created()&amp;#27;[0m
+      &amp;#27;[31morg.junit.ComparisonFailure: expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at framework.stepdefinitions.SignUpStepDefs.he_should_be_told_that_the_account_was_not_created(SignUpStepDefs.java:57)
+	at ?.he should be told that the account was not created(file:///C:/Users/membr/IdeaProjects/selenium-Framework/src/test/resources/features/signup.feature:12)
+&amp;#27;[0m
+
+    Embedding 3085ea64-e52d-45ce-8bea-e3153607ae6f [image/png 52081 bytes]
+
+</system-out>
   </testcase>
 </testsuite>
