@@ -1,17 +1,19 @@
 package framework.stepdefinitions;
 
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
 import framework.Builders.data.UserBuilder;
 import framework.conf.DriverConfig;
-import framework.pageobject.SignUpServices;
 import framework.tasks.NavigateTo;
 import framework.tasks.UserSignUp;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @ContextConfiguration(classes = {DriverConfig.class})
 public class SignUpStepDefs {
@@ -42,13 +44,17 @@ public class SignUpStepDefs {
 
 
         );
-        Thread.sleep(7000);
+
     }
 
     @Then("^he should be told that the account was created$")
     public void he_should_be_told_that_the_account_was_created()  {
-
+        assertThat(true).isEqualTo(true);
     }
 
+    @Then("^he should be told that the account was not created$")
+    public void he_should_be_told_that_the_account_was_not_created()  {
+        assertThat(true).isEqualTo(false);
+    }
 
 }

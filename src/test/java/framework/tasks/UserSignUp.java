@@ -28,7 +28,7 @@ public class UserSignUp {
         signUp.writeConfirmPassword(user.getPasswordConfirmation());
 
 
-        Thread.sleep( 8000);
+       Thread.sleep( 8000);
     }
 
 
