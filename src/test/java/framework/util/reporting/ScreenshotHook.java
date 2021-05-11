@@ -1,12 +1,14 @@
 package framework.util.reporting;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.UUID;
 
@@ -15,8 +17,30 @@ public class ScreenshotHook {
     @Autowired
     private WebDriver webDriver;
 
+    @Value("${take.screenshot.condition:none}")
+    private TakeScreenshotCondition takesScreenshotCondition;
+
     @After
-    public void takeScreenshot(Scenario scenario){
+    public void takeScreenshotAfterScenario(Scenario scenario){
+        if (TakeScreenshotCondition.everyStep == takesScreenshotCondition)
+            takeScreenshot(scenario);
+    }
+
+    @AfterStep
+    public void takeScreenshotAfterEveryStep(Scenario scenario){
+        if (TakeScreenshotCondition.everyStep == takesScreenshotCondition)
+            takeScreenshot(scenario);
+    }
+
+    @After
+    public void takeScreenshotAfterFailingScenario(Scenario scenario){
+        if (scenario.isFailed() && TakeScreenshotCondition.failingScenario == takesScreenshotCondition)
+            takeScreenshot(scenario);
+    }
+
+
+    @After
+    private void takeScreenshot(Scenario scenario){
         try {
             if (scenario.isFailed()){
                 final byte[] screenshot = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.BYTES);

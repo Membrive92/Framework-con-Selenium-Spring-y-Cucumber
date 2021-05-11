@@ -2,6 +2,7 @@ framework\util\RandomNumberGenerator.class
 framework\enums\Gender.class
 framework\pageobject\SignUpPO.class
 framework\pageobject\SignUpServices.class
+framework\util\reporting\TakeScreenshotCondition.class
 framework\CucumberTest.class
 framework\enums\Browser.class
 framework\Models\User$UserBuilder.class

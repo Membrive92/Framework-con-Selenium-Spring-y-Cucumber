@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="1" name="framework.CucumberTest" time="28.865" errors="0" skipped="0">
+<testsuite tests="2" failures="1" name="framework.CucumberTest" time="29.525" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -65,8 +65,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Client sign up" name="client sign up successfully" time="16.187"/>
-  <testcase classname="Client sign up" name="client sign up failed" time="12.678">
+  <testcase classname="Client sign up" name="client sign up successfully" time="16.709"/>
+  <testcase classname="Client sign up" name="client sign up failed" time="12.816">
     <failure message="expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -87,8 +87,18 @@ Scenario: client sign up failed                           &amp;#27;[90m# src/tes
 	at ?.he should be told that the account was not created(file:///C:/Users/membr/IdeaProjects/selenium-Framework/src/test/resources/features/signup.feature:12)
 &amp;#27;[0m
 
-    Embedding 3085ea64-e52d-45ce-8bea-e3153607ae6f [image/png 52081 bytes]
+    Embedding 81198247-856b-4c25-81b4-32f57b7bce30 [image/png 51894 bytes]
+
+
+    Embedding a2499b1c-27d6-4102-82de-ad7b395b9443 [image/png 51894 bytes]
 
 </system-out>
+    <system-err>may 11, 2021 11:25:59 AM org.springframework.test.context.support.DefaultTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+INFORMACIÓN: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+may 11, 2021 11:25:59 AM org.springframework.test.context.support.DefaultTestContextBootstrapper getTestExecutionListeners
+INFORMACIÓN: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ec58feb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1dbb650b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@656d10a4]
+may 11, 2021 11:25:59 AM org.springframework.beans.factory.support.DefaultListableBeanFactory registerScope
+INFORMACIÓN: Replacing scope &apos;cucumber-glue&apos; from [io.cucumber.spring.GlueCodeScope@3104351d] to [io.cucumber.spring.GlueCodeScope@77d18d0b]
+</system-err>
   </testcase>
 </testsuite>
