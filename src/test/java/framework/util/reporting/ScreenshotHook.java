@@ -22,7 +22,7 @@ public class ScreenshotHook {
 
     @After
     public void takeScreenshotAfterScenario(Scenario scenario){
-        if (TakeScreenshotCondition.everyStep == takesScreenshotCondition)
+        if (TakeScreenshotCondition.endOfScenario == takesScreenshotCondition)
             takeScreenshot(scenario);
     }
 
@@ -42,10 +42,9 @@ public class ScreenshotHook {
     @After
     private void takeScreenshot(Scenario scenario){
         try {
-            if (scenario.isFailed()){
                 final byte[] screenshot = ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.BYTES);
                 scenario.embed(screenshot, "image/png", UUID.randomUUID().toString());
-            }
+
 
         } catch (WebDriverException wde){
             System.out.println("There was an error taking the screenshoot" + wde.getMessage());
