@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="1" name="framework.CucumberTest" time="29.246" errors="0" skipped="0">
+<testsuite tests="2" failures="1" name="framework.CucumberTest" time="31.339" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_211\jre\bin"/>
@@ -29,7 +29,7 @@
     <property name="os.name" value="Windows 10"/>
     <property name="classworlds.conf" value="C:\Program Files (x86)\Maven\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_211\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Java\jdk-9;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Calibre2\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\membr\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Tt;C:\Program Files (x86)\Maven\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\membr\AppData\Local\Microsoft\WindowsApps;C:\Users\membr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\bin;;C:\Users\membr\AppData\Roaming\npm;;C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin;;C:\Program Files\JetBrains\PyCharm 2020.3.5\bin;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_211\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\Program Files\Java\jdk-9;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Calibre2\;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Java\jdk1.8.0_211\bin;C:\Users\membr\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\Tt;C:\Program Files (x86)\Maven\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\membr\AppData\Local\Microsoft\WindowsApps;C:\Users\membr\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2020.1.1\bin;;C:\Users\membr\AppData\Roaming\npm;;C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.3\bin;;C:\Program Files\JetBrains\PyCharm 2020.3.5\bin;;."/>
     <property name="maven.conf" value="C:\Program Files (x86)\Maven\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
@@ -65,8 +65,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Client sign up" name="client sign up successfully" time="16.404"/>
-  <testcase classname="Client sign up" name="client sign up failed" time="12.842">
+  <testcase classname="Client sign up" name="client sign up successfully" time="18.636"/>
+  <testcase classname="Client sign up" name="client sign up failed" time="12.703">
     <failure message="expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: expected:&lt;[fals]e&gt; but was:&lt;[tru]e&gt;
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -87,15 +87,15 @@ Scenario: client sign up failed                           &amp;#27;[90m# src/tes
 	at ?.he should be told that the account was not created(file:///C:/Users/membr/IdeaProjects/selenium-Framework/src/test/resources/features/signup.feature:12)
 &amp;#27;[0m
 
-    Embedding 922392f8-326c-450a-9a3b-32e4065cccd5 [image/png 52018 bytes]
+    Embedding e8b89816-e1cb-43f4-9291-be8bb3c80f9a [image/png 52066 bytes]
 
 </system-out>
-    <system-err>may 12, 2021 1:24:27 PM org.springframework.test.context.support.DefaultTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+    <system-err>may 19, 2021 12:45:15 PM org.springframework.test.context.support.DefaultTestContextBootstrapper getDefaultTestExecutionListenerClassNames
 INFORMACIÓN: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-may 12, 2021 1:24:27 PM org.springframework.test.context.support.DefaultTestContextBootstrapper getTestExecutionListeners
-INFORMACIÓN: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ec58feb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1dbb650b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@656d10a4]
-may 12, 2021 1:24:27 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerScope
-INFORMACIÓN: Replacing scope &apos;cucumber-glue&apos; from [io.cucumber.spring.GlueCodeScope@3104351d] to [io.cucumber.spring.GlueCodeScope@77d18d0b]
+may 19, 2021 12:45:15 PM org.springframework.test.context.support.DefaultTestContextBootstrapper getTestExecutionListeners
+INFORMACIÓN: Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5438c17a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@b9d018b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@429aeac1]
+may 19, 2021 12:45:15 PM org.springframework.beans.factory.support.DefaultListableBeanFactory registerScope
+INFORMACIÓN: Replacing scope &apos;cucumber-glue&apos; from [io.cucumber.spring.GlueCodeScope@6b4fc2d1] to [io.cucumber.spring.GlueCodeScope@8bd076a]
 </system-err>
   </testcase>
 </testsuite>

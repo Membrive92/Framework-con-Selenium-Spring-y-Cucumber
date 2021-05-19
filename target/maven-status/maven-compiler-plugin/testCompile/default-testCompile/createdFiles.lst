@@ -4,8 +4,10 @@ framework\pageobject\SignUpPO.class
 framework\pageobject\SignUpServices.class
 framework\util\reporting\TakeScreenshotCondition.class
 framework\CucumberTest.class
+framework\util\reporting\HookReporter.class
 framework\enums\Browser.class
 framework\Models\User$UserBuilder.class
+framework\util\reporting\ScenarioExecutionInfo.class
 framework\stepdefinitions\SignUpStepDefs.class
 framework\Models\User.class
 framework\tasks\UserSignUp.class
