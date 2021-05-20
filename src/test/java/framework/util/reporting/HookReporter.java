@@ -22,7 +22,7 @@ public class HookReporter {
 
         RestAssured
                 .given()
-                .body(scenario)
+                .body(scenarioExecutionInfo)
                 .contentType(ContentType.JSON)
                 .when()
                 .post(ELASTIC_SEARCH_URL);
