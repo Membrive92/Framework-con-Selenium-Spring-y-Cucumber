@@ -1,12 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: framework.CucumberTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 30.519 sec <<< FAILURE!
-client sign up failed(Client sign up)  Time elapsed: 12.842 sec  <<< FAILURE!
+Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 74.052 sec <<< FAILURE!
+client sign up failed(Client sign up)  Time elapsed: 16.977 sec  <<< FAILURE!
 org.junit.ComparisonFailure: expected:<[fals]e> but was:<[tru]e>
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at framework.stepdefinitions.SignUpStepDefs.he_should_be_told_that_the_account_was_not_created(SignUpStepDefs.java:57)
-	at ?.he should be told that the account was not created(file:///C:/Users/membr/IdeaProjects/selenium-Framework/src/test/resources/features/signup.feature:12)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at framework.stepdefinitions.SignUpStepDefs.he_should_be_told_that_the_account_was_not_created(SignUpStepDefs.java:58)
+	at ✽.he should be told that the account was not created(file:///home/jamembrive/IdeaProjects/Framework-con-Selenium-Spring-y-Cucumber/src/test/resources/features/signup.feature:13)
+
+client sign up failed 2(Client sign up)  Time elapsed: 16.622 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[fals]e> but was:<[tru]e>
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at framework.stepdefinitions.SignUpStepDefs.he_should_be_told_that_the_account_was_not_created(SignUpStepDefs.java:58)
+	at ✽.he should be told that the account was not created(file:///home/jamembrive/IdeaProjects/Framework-con-Selenium-Spring-y-Cucumber/src/test/resources/features/signup.feature:24)
 
